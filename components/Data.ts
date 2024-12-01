@@ -37,7 +37,7 @@ export const solutions = [
 ];
 
 export const titles = [
-  "Trebuchet?!",
+  "Historian Hysteria",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
