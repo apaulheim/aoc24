@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "Super Mario";
+  src: url("Super-Mario-World.ttf") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: "Super Mario", monospace;
+  background-color: #192a49;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-size: cover;
+}
+
+.title img {
+  width: 2em;
+  padding-left: 1em;
+}
+
+.main-title {
+  color: #4e6eaa;
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+  /* -webkit-text-stroke: 3px #2e446d; */
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 130px);
+  grid-template-rows: repeat(5, 130px);
+  gap: 20px 20px;
+}
+.decoration {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 125px);
+}
+.container-day {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+}
+.container-code {
+  z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+}
+.presents {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.replit {
+  padding: 10px;
+  background: rgb(235, 235, 235);
+  border: 3px solid black;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-size: 0.8em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+.replit svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+iframe {
+  margin-top: 10px;
+}
+.day-container {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #2e446d;
+  padding: 10px;
+}
+.day {
+  width: 90px;
+  height: 90px;
+  align-self: center;
+}
+.day-nr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 2.5em;
+  -webkit-text-stroke: 3px black;
+  z-index: 100;
+}
+
+.solutions {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: flex-end;
+  width: 110px;
+  height: 110px;
+  z-index: 3;
+}
+
+.solutions.day {
+  position: relative;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.solutions.day .minipresent {
+  padding: 3px;
+  height: 2em;
+  width: 2em;
+  font-size: 1.5em;
+  background-color: white;
+  margin: 10px;
+}
+
+.no-solution {
+  color: white;
+}
+
+.day-aoc {
+  align-self: center;
+}
+
+.day-aoc a {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  color: #e8e95c;
+  text-decoration: underline;
+}
+
+.day-aoc img {
+  width: 1.5em;
+  margin-right: 1em;
+}
+
+.title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 730px;
+}
+
+.minipresent {
+  position: relative;
+  padding: 3px;
+  height: 1.7em;
+  width: 1.7em;
+  font-size: 0.7em;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.minipresent-lang {}
+.minipresent.js {
+  border: 5px solid darkgreen;
+  color: darkgreen;
+}
+.minipresent.py {
+  border: 5px solid darkgoldenrod;
+  color: darkgoldenrod;
+}
+.minipresent.rs {
+  border: 5px solid orangered;
+  color: orangered;
+}
+.minipresent.go {
+  border: 5px solid blue;
+  color: blue;
+}
+.minipresent.rb {
+  border: 5px solid #af0b00;
+  color: #af0b00;
+}
+.minipresent.js path {
+  fill: hsl(89, 63%, 50%);
+}
+.minipresent.py path {
+  fill: hsl(44, 75%, 50%);
+}
+.minipresent.rs path {
+  fill: hsl(21, 100%, 50%);
+}
+.minipresent.go path {
+  fill: hsl(186, 54%, 50%);
+}
+.navbar-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navbar-container {
+  color: white;
+  font-size: 1em;
+  /* -webkit-text-stroke: 3px black; */
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  background-color: #2e446d;
+}
+
+.day-title {
+  color: white;
+  font-size: 2.5em;
+  -webkit-text-stroke: 3px black;
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-size: cover;
+  }
+  .title {
+    width: 100vw;
+    padding: 0 20px;
+  }
+  .main-title {
+    color: #4e6eaa;
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    /* -webkit-text-stroke: 3px #2e446d; */
+  }
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    gap: 20px 20px;
+  }
+}
