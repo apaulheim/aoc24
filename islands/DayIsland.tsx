@@ -1,5 +1,4 @@
 import { useState } from "preact/hooks";
-import Present from "../components/Present.tsx";
 import {
   imagesPng,
   Language,
@@ -9,49 +8,20 @@ import {
 } from "../components/Data.ts";
 import { MiniPresent } from "../components/MiniPresent.tsx";
 import { MiniPresentType } from "../components/MiniPresent.tsx";
+import CodeDisplay from "../components/CodeDisplay.tsx";
 
 interface DayIslandProps {
   dayNr: number;
 }
 
 export default function DayIsland({ dayNr }: DayIslandProps) {
-  const images = imagesPng;
-
   const [selectedLang, setSelectedLang] = useState(
     dayNr - 1 < solutions.length && solutions[dayNr - 1].length > 0 ? 0 : -1,
   );
 
-  const renderPresents = () => {
-    if (dayNr - 1 < solutions.length) {
-      return (
-        solutions[dayNr - 1].map((lang: Language) => (
-          <Present
-            language={lang}
-            onClick={(lang: Language) => {
-              setSelectedLang(lang);
-              console.log("selectedLang", lang);
-            }}
-          />
-        ))
-      );
-    }
-    return null;
-  };
-
   const renderGithubEmbed = () => {
     if (selectedLang >= 0) {
-      return (
-        <iframe
-          frameBorder="0"
-          width="800px"
-          height="500px"
-          srcDoc={`<html><body><script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fapaulheim%2Faoc23code%2Fblob%2Fmain%2F${
-            languages[selectedLang]
-          }%2Fday${dayNr}.${
-            languages[selectedLang]
-          }&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script></body></html>`}
-        />
-      );
+      return <CodeDisplay language={selectedLang} day={dayNr} />;
     }
     return null;
   };

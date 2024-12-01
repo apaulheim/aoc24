@@ -1,10 +1,4 @@
-import { asset, Head } from "$fresh/runtime.ts";
-import {
-  imagesPng,
-  languageColors,
-  languages,
-  solutions,
-} from "../components/Data.ts";
+import { imagesPng, solutions } from "../components/Data.ts";
 import { MiniPresent, MiniPresentType } from "../components/MiniPresent.tsx";
 
 export default function Home() {
@@ -64,31 +58,23 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Head>
-        <title>
-          Annis AOC24
-        </title>
-        <link rel="stylesheet" href={asset("/global.css")} />
-      </Head>
-      <div class="container">
-        <div class="title">
-          <div class="main-title">
-            Anni's AOC 2024
-          </div>
-          <div>
-            <a href="https://adventofcode.com/2024" target="_blank">
-              <img src="./aoc.png" />
-            </a>
-            <a href="https://github.com/apaulheim/aoc24" target="_blank">
-              <img src="./github.png" />
-            </a>
-          </div>
+    <div class="container">
+      <div class="title">
+        <div class="main-title">
+          Anni's AOC 2024
         </div>
-        <div class="calendar">
-          {randomizedDays.map((index) => renderDay(imagesPng[index], index))}
+        <div>
+          <a href="https://adventofcode.com/2024" target="_blank">
+            <img src="./aoc.png" />
+          </a>
+          <a href="https://github.com/apaulheim/aoc24" target="_blank">
+            <img src="./github.png" />
+          </a>
         </div>
       </div>
-    </>
+      <div class="calendar">
+        {randomizedDays.map((index) => renderDay(imagesPng[index], index))}
+      </div>
+    </div>
   );
 }

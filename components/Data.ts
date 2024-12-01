@@ -9,7 +9,7 @@ export enum Language {
 export const languages = ["js", "py", "rs", "go", "rb"];
 
 export const solutions = [
-  [],
+  [Language.JS],
   [],
   [],
   [],

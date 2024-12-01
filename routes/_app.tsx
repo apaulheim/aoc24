@@ -5,8 +5,9 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>aoc24</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <title>Annis AOC24</title>
+        <link rel="stylesheet" href="/global.css" />
+        <link rel="stylesheet" href="/prism.css" />
       </head>
       <body>
         <Component />
