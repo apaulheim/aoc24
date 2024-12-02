@@ -1,14 +1,7 @@
 import { useState } from "preact/hooks";
-import {
-  imagesPng,
-  Language,
-  languages,
-  solutions,
-  titles,
-} from "../components/Data.ts";
-import { MiniPresent } from "../components/MiniPresent.tsx";
-import { MiniPresentType } from "../components/MiniPresent.tsx";
 import CodeDisplay from "../components/CodeDisplay.tsx";
+import { Language, solutions, titles } from "../components/Data.ts";
+import { MiniPresent, MiniPresentType } from "../components/MiniPresent.tsx";
 
 interface DayIslandProps {
   dayNr: number;
@@ -41,10 +34,36 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   };
 
   const renderTitle = (dayNr: number) => {
-    let ret = `Day ${dayNr}`;
-    if (titles.length >= dayNr && titles[dayNr - 1]?.length > 0) {
-      return `${ret}: ${titles[dayNr - 1]}`;
-    } else return ret;
+    const renderLink = (left: boolean) => {
+      let text = "";
+      if (left && dayNr > 1) text = `< ${dayNr - 1}`;
+      if (!left && dayNr < 25) text = `${dayNr + 1} >`;
+      let href = `/day/${left ? dayNr - 1 : dayNr + 1}`;
+
+      return (
+        <div>
+          <a href={href}>{text}</a>
+        </div>
+      );
+    };
+    const aocTitle = () => {
+      if (titles.length >= dayNr && titles[dayNr - 1]?.length > 0) {
+        return (
+          <>
+            <br />
+            {titles[dayNr - 1]}
+          </>
+        );
+      }
+      return null;
+    };
+    return (
+      <div class="day-title">
+        {renderLink(true)}
+        <div>Day {dayNr}{aocTitle()}</div>
+        {renderLink(false)}
+      </div>
+    );
   };
 
   return (
@@ -54,7 +73,7 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
           {"\< Back to calendar"}
         </a>
       </div>
-      <div class="day-title">{renderTitle(dayNr)}</div>
+      {renderTitle(dayNr)}
       <div class="day-aoc">
         <a href={`https://adventofcode.com/2024/day/${dayNr}`}>
           <img class="aoc" src="../../aoc.png" />

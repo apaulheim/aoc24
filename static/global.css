@@ -227,12 +227,13 @@ iframe {
 }
 
 .day-title {
+  display: flex;
+  justify-content: space-between;
   color: white;
   font-size: 2.5em;
-  -webkit-text-stroke: 3px black;
   text-align: center;
-  width: 100%;
-  margin-top: 1em;
+  width: calc(100% - 2em);
+  padding: 1em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -254,6 +255,9 @@ iframe {
     margin-top: 1em;
     margin-left: 1em;
     /* -webkit-text-stroke: 3px #2e446d; */
+  }
+  .day-title {
+    font-size: 1em;
   }
   .calendar {
     display: grid;
