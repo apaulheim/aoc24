@@ -1,4 +1,4 @@
-let fs = require("node:fs");
+const fs = require("node:fs");
 
 const input = fs.readFileSync("../input/1.txt", { encoding: "utf8" });
 const lines = input.split("\n");
@@ -17,17 +17,17 @@ for (let i = 0; i < lines.length; i++) {
 leftNumbers = leftNumbers.sort((a, b) => a - b);
 rightNumbers = rightNumbers.sort((a, b) => a - b);
 
-let silver = leftNumbers.reduce(
+const silver = leftNumbers.reduce(
   (acc, curr, index) => acc + Math.abs(curr - rightNumbers[index]),
   0,
 );
 console.log(silver);
 
-let rightMap = new Map();
+const rightMap = new Map();
 for (let i = 0; i < rightNumbers.length; i++) {
   rightMap.set(rightNumbers[i], (rightMap.get(rightNumbers[i]) || 0) + 1);
 }
-let gold = leftNumbers.reduce(
+const gold = leftNumbers.reduce(
   (acc, curr) => acc + curr * (rightMap.get(curr) || 0),
   0,
 );
