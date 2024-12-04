@@ -12,7 +12,7 @@ export const solutions = [
   [Language.JS],
   [Language.JS],
   [Language.JS],
-  [],
+  [Language.JS],
   [], // Day 5
   [],
   [],
