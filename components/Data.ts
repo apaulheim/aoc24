@@ -13,7 +13,7 @@ export const solutions = [
   [Language.JS],
   [Language.JS],
   [Language.JS],
-  [], // Day 5
+  [Language.JS], // Day 5
   [],
   [],
   [],
@@ -40,6 +40,8 @@ export const titles = [
   "Historian Hysteria",
   "Red-Nosed Reports",
   "Mull It Over",
+  "Ceres Search",
+  "Print Queue",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
