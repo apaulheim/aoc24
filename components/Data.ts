@@ -15,7 +15,7 @@ export const solutions = [
   [Language.JS],
   [Language.JS], // Day 5
   [Language.JS],
-  [],
+  [Language.JS],
   [],
   [],
   [], // Day 10
@@ -43,6 +43,7 @@ export const titles = [
   "Ceres Search",
   "Print Queue",
   "Guard Gallivant",
+  "Bridge Repair",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
