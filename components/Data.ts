@@ -18,7 +18,7 @@ export const solutions = [
   [Language.JS],
   [Language.JS],
   [],
-  [], // Day 10
+  [Language.JS], // Day 10
   [],
   [],
   [],
@@ -45,6 +45,8 @@ export const titles = [
   "Guard Gallivant",
   "Bridge Repair",
   "Resonant Collinearity",
+  "Disk Fragmenter",
+  "Hoof It",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
