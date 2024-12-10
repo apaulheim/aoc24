@@ -136,6 +136,7 @@ iframe {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: center;
   width: 100%;
   color: #e8e95c;
   text-decoration: underline;
@@ -203,7 +204,7 @@ iframe {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: calc(100% - 20px);
+  width: 100%;
 }
 
 .navbar {
@@ -224,6 +225,15 @@ iframe {
   padding: 5px;
   margin: 5px;
   background-color: #2e446d;
+}
+.sticky {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Optional: to ensure the navbar is above other content */
+  padding: 10px; /* Optional: to add some padding */
+  width: calc(100% - 30px);
+  background-color: #192a49;
 }
 
 .day-title {
