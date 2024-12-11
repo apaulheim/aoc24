@@ -7,6 +7,16 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "11",
+      "cwd": "${workspaceFolder}/static/js",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\static\\js\\11.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "10",
       "cwd": "${workspaceFolder}/static/js",
       "skipFiles": [

@@ -19,7 +19,7 @@ export const solutions = [
   [Language.JS],
   [Language.JS],
   [Language.JS], // Day 10
-  [],
+  [Language.JS],
   [],
   [],
   [],
@@ -47,6 +47,7 @@ export const titles = [
   "Resonant Collinearity",
   "Disk Fragmenter",
   "Hoof It",
+  "Plutonian Pebbles",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
