@@ -21,8 +21,8 @@ export const solutions = [
   [Language.JS], // Day 10
   [Language.JS],
   [Language.JS],
-  [],
-  [],
+  [Language.JS],
+  [Language.JS],
   [], // Day 15
   [],
   [],
@@ -49,6 +49,8 @@ export const titles = [
   "Hoof It",
   "Plutonian Pebbles",
   "Garden Groups",
+  "Claw Contraption",
+  "Restroom Redoubt",
 ];
 
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
