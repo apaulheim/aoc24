@@ -1,5 +1,5 @@
-const fs = require("fs");
-const content = fs.readFileSync("../input/14.txt", { encoding: "utf8" });
+import { readFileSync } from "node:fs";
+const content = readFileSync("../input/14.txt", { encoding: "utf8" });
 const regex = /p=(\d+),(\d+)\s+v=(-?\d+),(-?\d+)/g;
 let match;
 const data = [];
